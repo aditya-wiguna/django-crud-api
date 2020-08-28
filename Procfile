@@ -1,1 +1,1 @@
-web: gunicorn api-customer-wiguna.wsgi --log-file -
+web: gunicorn apiCustomer.wsgi --log-file -
