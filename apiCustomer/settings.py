@@ -27,7 +27,9 @@ SECRET_KEY = 'b!in(#283i(au^mq_wh=6#^dusy*sf5cd8+96a2i+o*ak#v3$j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'api-customer-wiguna.herokuapp.com'
+]
 
 
 # Application definition
