@@ -75,15 +75,21 @@ WSGI_APPLICATION = 'apiCustomer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'api_customer',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'api_customer',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
+    'default': dj_database_url.config(
+        default='postgres://curvyiadxumucj:e37f0755452671cc971d58d2d16fdb2f5d68c3961796cb900fff58138ba3ca89@ec2-54-91-178-234.compute-1.amazonaws.com:5432/d721sbj5tclugk'
+    )
 }
 
 
