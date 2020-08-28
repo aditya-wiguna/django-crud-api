@@ -3,13 +3,6 @@ from customer.models import Customer
 
 
 class CustomerSerializer(serializers.ModelSerializer):
-    def validate(self, data):
-        """
-        Check that the start is before the stop.
-        """
-        if data['name'] == "":
-            raise serializers.ValidationError("name is required")
-        return data
     class Meta:
         model = Customer
         fields = ('id',

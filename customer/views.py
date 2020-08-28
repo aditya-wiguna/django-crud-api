@@ -27,6 +27,13 @@ def index(request):
 
     #Store Data
     elif request.method == 'POST':
+        if request.name == "":
+            return JsonResponse({
+                "success": bool(0),
+                "message": "name is required",
+                "data": []
+            }, status=status.HTTP_400_BAD_REQUEST)
+
         customer_data = JSONParser().parse(request)
         customer_serializer = CustomerSerializer(data=customer_data)
         if customer_serializer.is_valid():
